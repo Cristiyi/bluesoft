@@ -1,0 +1,130 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,header,footer {margin:0;padding:0}
+body {font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a {color:#2d374b;text-decoration:none}
+a:hover {color:#cd0200;text-decoration:underline}
+em {font-style:normal}
+li {list-style:none}
+table {border-collapse:collapse;border-spacing:0}
+p {word-wrap:break-word}
+
+
+
+.header {
+  padding-bottom: 30px;
+  border-bottom: 2px solid blue;
+}
+
+.nav-logo {
+    float: left;
+    height: 40px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.nav-logo a {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.search {
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin-bottom: 20px;
+}
+
+
+
+.autumn-grids {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: -25px;
+    letter-spacing: -4px;
+    zoom: 1;
+}
+
+.autumn-grid {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+    letter-spacing: 0;
+    width: 130px;
+    margin: 0px 10px 17px 0;
+    background: #fff;
+    padding: 0px;
+}
+.autumn-grid p {
+    text-align:center;
+    margin:0;
+    padding:10px 0 5px 2px;
+    }
+    .autumn-grid:hover {
+        border-top-color: #f78a4b;
+    }
+
+@media (min-width: 1200px) {
+  .page {
+    margin-left: 70px !important;
+   }
+  .autumn-grids {
+      margin-left: 70px;
+  }
+    .autumn-grid {
+        width: 130px;
+        margin: 0px 26px 17px 0;
+    }
+}
+
+@media (min-width: 980px ) and ( max-width: 1199px ) {
+  .page {
+    margin-left: 70px !important;
+   }
+  .autumn-grids {
+      margin-left: 70px;
+  }
+    .autumn-grid {
+        width: 120px;
+        margin: 0px 20px 20px 0;
+    }
+}
+
+@media (min-width: 768px ) and ( max-width: 979px ) {
+  .page {
+    margin-left: 40px !important;
+   }
+  .autumn-grids {
+      margin-left: 40px;
+  }
+    .autumn-grid {
+        width: 120px;
+        margin: 0px 20px 20px 0;
+    }
+}
+
+@media ( max-width: 767px ) {
+
+    .page {
+      margin-left: 30px !important;
+     }
+    .autumn-grids {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .autumn-grid {
+        width: 100px;
+        margin: 0px 20px 20px 0;
+    }
+}
+
+.page {
+  margin-right: 0;
+  margin-left: 30px;
+}
