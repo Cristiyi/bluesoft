@@ -21,7 +21,7 @@
         <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
-            <a href="javascript:;">admin</a>
+            <a href="">admin</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a href="">个人信息</a></dd>
 							<dd><a href="{{url('admin/logout')}}">切换帐号</a></dd>
@@ -39,7 +39,7 @@
           <div id="side-nav">
             <ul id="nav">
                 <li class="list" current>
-                    <a href="./index.html">
+                    <a href="{{url('admin/index')}}">
                         <i class="iconfont">&#xe761;</i>
                         欢迎页面
                         <i class="iconfont nav_right">&#xe697;</i>

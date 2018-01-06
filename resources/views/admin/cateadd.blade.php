@@ -21,7 +21,7 @@
         <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
-            <a href="javascript:;">admin</a>
+            <a href="">admin</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a href="">个人信息</a></dd>
               <dd><a href="{{url('admin/logout')}}">切换帐号</a></dd>
@@ -39,7 +39,7 @@
           <div id="side-nav">
             <ul id="nav">
                 <li class="list" current>
-                    <a href="./index.html">
+                    <a href="{{url('admin/index')}}">
                         <i class="iconfont">&#xe761;</i>
                         欢迎页面
                         <i class="iconfont nav_right">&#xe697;</i>
@@ -51,7 +51,7 @@
                         会员管理
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
-                    <ul class="sub-menu opened">
+                    <ul class="sub-menu">
                         <li class="current">
                             <a href="member-list.html">
                                 <i class="iconfont">&#xe6a7;</i>
@@ -92,9 +92,24 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="./category.html">
+                            <a href="{{url('admin/catelist')}}">
                                 <i class="iconfont">&#xe6a7;</i>
                                 分类列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list" >
+                    <a href="javascript:;">
+                        <i class="iconfont">&#xe6a3;</i>
+                        资源管理
+                        <i class="iconfont nav_right">&#xe697;</i>
+                    </a>
+                    <ul class="sub-menu" style="display:none">
+                        <li>
+                            <a href="{{url('admin/relist')}}">
+                                <i class="iconfont">&#xe6a7;</i>
+                                资源列表
                             </a>
                         </li>
                     </ul>

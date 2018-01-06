@@ -39,7 +39,7 @@
           <div id="side-nav">
             <ul id="nav">
                 <li class="list" current>
-                    <a href="./index.html">
+                    <a href="{{url('admin/index')}}">
                         <i class="iconfont">&#xe761;</i>
                         欢迎页面
                         <i class="iconfont nav_right">&#xe697;</i>
@@ -51,7 +51,7 @@
                         会员管理
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
-                    <ul class="sub-menu opened">
+                    <ul class="sub-menu">
                         <li class="current">
                             <a href="member-list.html">
                                 <i class="iconfont">&#xe6a7;</i>
