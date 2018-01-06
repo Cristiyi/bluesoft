@@ -17,15 +17,15 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="./index.html">X-ADMIN V1.1</a></div>
+        <div class="logo"><a href="{{url('admin/index')}}">后台首页</a></div>
         <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
             <a href="javascript:;">admin</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a href="">个人信息</a></dd>
-              <dd><a href="">切换帐号</a></dd>
-              <dd><a href="./login.html">退出</a></dd>
+              <dd><a href="{{url('admin/logout')}}">切换帐号</a></dd>
+              <dd><a href="{{url('admin/logout')}}">退出</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item"><a href="/">前台首页</a></li>
@@ -203,7 +203,8 @@
         <div class="page-content">
           <div class="content">
             <!-- 右侧内容框架，更改从这里开始 -->
-            <form class="layui-form xbs" action="" >
+            <!-- <form class="layui-form xbs" action="" >
+              {{csrf_field()}}
                 <div class="layui-form-pane" style="text-align: center;">
                   <div class="layui-form-item" style="display: inline-block;">
                       <label class="layui-form-label xbs768">分类名称</label>
@@ -215,7 +216,7 @@
                     </div>
                   </div>
                 </div>
-            </form>
+            </form> -->
             <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="location.href='{{url('admin/cateadd')}}'"><i class="layui-icon">&#xe608;</i>添加</button></xblock>
             <table class="layui-table">
                 <thead>

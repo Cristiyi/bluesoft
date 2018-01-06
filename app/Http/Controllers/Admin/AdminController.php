@@ -40,6 +40,12 @@ class AdminController extends Controller
 
   }
 
+  public function logout() {
+
+    return redirect('admin/login');
+
+  }
+
 //   public function doLogin() {
 //
 //     if($input = Input::all()) {

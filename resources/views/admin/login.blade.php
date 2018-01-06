@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <div class="login-logo"><h1>X-ADMIN V1.1</h1></div>
+    <div class="login-logo"><h1>后台</h1></div>
     <div class="login-box">
         <form class="layui-form layui-form-pane" action="">
 

@@ -9,7 +9,7 @@ $(function () {
 	//初如化背景
 	function bgint () {
     	if(localStorage.bglist){
-            var arr = JSON.parse(localStorage.bglist);// 
+            var arr = JSON.parse(localStorage.bglist);//
             // console.log(arr);
             //全局背景统一
             if(arr['bgSrc']){
@@ -61,7 +61,7 @@ $(function () {
     		$('.bg-changer').animate({top: '-110px'}, 500);
     		is_show_change=true;
     	}
-    	
+
     });
 
     //背景主题切换
@@ -78,7 +78,7 @@ $(function () {
 
         // 单个背景逻辑
     	// arr[url]=src;
-        
+
         // 全局背景统一
         arr['bgSrc'] = src;
         // console.log(arr);
@@ -114,7 +114,7 @@ $(function () {
             $(this).removeClass('open');
             $(this).find('.nav_right').html('&#xe697;');
             $(this).children('.sub-menu').slideUp();
-            // $(this).siblings().children('.sub-menu').slideUp();
+            $(this).siblings().children('.sub-menu').slideUp();
         }else{
             $(this).addClass('open');
             $(this).find('.nav_right').html('&#xe6a6;');
@@ -122,19 +122,19 @@ $(function () {
             $(this).siblings().children('.sub-menu').slideUp();
             $(this).siblings().removeClass('open');
         }
-        
+
     })
 
     //初始化菜单展开样式
     $('.left-nav #nav li .opened').siblings('a').find('.nav_right').html('&#xe6a6;');
 
-    
 
 
 
 
 
-    
+
+
 })
 
 /*弹出层*/

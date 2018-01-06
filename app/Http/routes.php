@@ -21,6 +21,8 @@ Route::any('admin/login', 'Admin\AdminController@login');
 
 Route::group(['middleware'=>['admin.login'],'prefix'=>'admin','namespace'=>'Admin'], function() {
 
+  Route::any('logout', 'AdminController@logout');
+
   Route::get('index', 'IndexController@index');
 
   Route::get('catelist', 'CategoryController@cateList');

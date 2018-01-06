@@ -17,15 +17,15 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="./index.html">X-ADMIN V1.1</a></div>
+        <div class="logo"><a href="{{url('admin/index')}}">后台首页</a></div>
         <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
             <a href="javascript:;">admin</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a href="">个人信息</a></dd>
-              <dd><a href="">切换帐号</a></dd>
-              <dd><a href="./login.html">退出</a></dd>
+							<dd><a href="{{url('admin/logout')}}">切换帐号</a></dd>
+              <dd><a href="{{url('admin/logout')}}">退出</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item"><a href="/">前台首页</a></li>
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="javascript:;">
+                    <a href="">
                         <i class="iconfont">&#xe70b;</i>
                         用户管理
                         <i class="iconfont nav_right">&#xe697;</i>
@@ -375,7 +375,7 @@
     <!-- 中部结束 -->
     <!-- 底部开始 -->
     <div class="footer">
-        <div class="copyright">Copyright ©2017 x-admin v2.3 All Rights Reserved. 本后台系统由X前端框架提供前端技术支持</div>
+        <div class="copyright"></div>
     </div>
     <!-- 底部结束 -->
     <!-- 背景切换开始 -->

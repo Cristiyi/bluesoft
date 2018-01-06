@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>后台登录-X-admin1.1</title>
+    <title>资源添加</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="{{URL::asset('admin/css/font.css')}}">
@@ -17,15 +17,15 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="./index.html">X-ADMIN V1.1</a></div>
+        <div class="logo"><a href="{{url('admin/index')}}">后台首页</a></div>
         <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
             <a href="javascript:;">admin</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a href="">个人信息</a></dd>
-              <dd><a href="">切换帐号</a></dd>
-              <dd><a href="./login.html">退出</a></dd>
+              <dd><a href="{{url('admin/logout')}}">切换帐号</a></dd>
+              <dd><a href="{{url('admin/logout')}}">退出</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item"><a href="/">前台首页</a></li>
@@ -203,7 +203,7 @@
         <div class="page-content">
           <div class="content">
             <!-- 右侧内容框架，更改从这里开始 -->
-            <form class="layui-form xbs" action="" >
+            <form class="layui-form xbs" action="" enctype="multipart/form-data" file="true" method="post">
 
 								{{csrf_field()}}
                 <div class="layui-form-item">
@@ -248,33 +248,49 @@
                     </select>
                   </div>
                 </div>
-                <div class="layui-form-item">
+                <!-- <div class="layui-form-item">
                     <label for="re_count" class="layui-form-label">
-                        <span class="x-red">*</span>资源下载数量
+                        <span class="x-red">*</span>下载数量
                     </label>
                     <div class="layui-input-inline">
                         <input type="text" id="cate_link" name="re_count" required=""
                         autocomplete="off" class="layui-input">
                     </div>
-                </div>
+                </div> -->
                 <div class="layui-form-item">
                     <label for="re_score" class="layui-form-label">
                         <span class="x-red">*</span>资源积分
                     </label>
                     <div class="layui-input-inline">
-                        <input type="text" id="cate_link" name="re_score" required=""
+                        <input type="text" id="cate_link" name="re_score" lay-verify="number"
                         autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label for="re_status" class="layui-form-label">
-                        <span class="x-red">*</span>分类状态
+                        <span class="x-red">*</span>资源状态
                     </label>
                     <div class="layui-input-inline">
                         <select class="" name="re_status">
 														<option value="1">启用</option>
 														<option value="0">停用</option>
                         </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="re_capture" class="layui-form-label">
+                        <span class="x-red">*</span>资源图片
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="file" name="re_capture" class="">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="re_qcode" class="layui-form-label">
+                        <span class="x-red">*</span>资源二维码
+                    </label>
+                    <div class="layui-input-inline">
+                      <input type="file" name="re_qcode" class="">
                     </div>
                 </div>
                 <div class="layui-form-item">

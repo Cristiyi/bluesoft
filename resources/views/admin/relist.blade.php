@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>后台登录-X-admin1.1</title>
+    <title>资源列表</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="{{URL::asset('admin/css/font.css')}}">
@@ -17,15 +17,15 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="./index.html">X-ADMIN V1.1</a></div>
+        <div class="logo"><a href="{{url('admin/index')}}">后台首页</a></div>
         <div class="open-nav"><i class="iconfont">&#xe699;</i></div>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
             <a href="javascript:;">admin</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a href="">个人信息</a></dd>
-              <dd><a href="">切换帐号</a></dd>
-              <dd><a href="./login.html">退出</a></dd>
+              <dd><a href="{{url('admin/logout')}}">切换帐号</a></dd>
+              <dd><a href="{{url('admin/logout')}}">退出</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item"><a href="/">前台首页</a></li>
@@ -204,11 +204,12 @@
           <div class="content">
             <!-- 右侧内容框架，更改从这里开始 -->
             <form class="layui-form xbs" action="" >
+              {{csrf_field()}}
                 <div class="layui-form-pane" style="text-align: center;">
                   <div class="layui-form-item" style="display: inline-block;">
                       <label class="layui-form-label xbs768">资源名称</label>
                     <div class="layui-input-inline">
-                      <input type="text" name="username"  placeholder="请输入资源名称" autocomplete="off" class="layui-input">
+                      <input type="text" name="re_name"  placeholder="请输入资源名称" autocomplete="off" class="layui-input">
                     </div>
                     <div class="layui-input-inline" style="width:80px">
                         <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
@@ -247,6 +248,12 @@
                         <th>
                             资源状态
                         </th>
+                        <!-- <th>
+                            资源图片
+                        </th>
+                        <th>
+                            资源二维码
+                        </th> -->
                         <th>
                             操作
                         </th>
@@ -288,6 +295,12 @@
                                 @endif
                             </span>
                         </td>
+                        <!-- <th>
+                            {{$g->re_capture}}
+                        </th>
+                        <th>
+                            {{$g->re_qcode}}
+                        </th> -->
                         <td class="td-manage">
                             <!-- <a style="text-decoration:none" onclick="member_stop(this,'10001')" href="javascript:;" title="停用">
                                 <i class="layui-icon">&#xe601;</i>
@@ -306,6 +319,7 @@
                 </tbody>
             </table>
             <!-- 右侧内容框架，更改从这里结束 -->
+            <div id="test1"></div>
           </div>
         </div>
         <!-- 右侧主体结束 -->

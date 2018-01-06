@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Http\Model\Resource;
 use App\Http\Model\Category;
+use App\Http\Model\AdminTools;
 
 class ResourceController extends Controller
 {
@@ -17,17 +18,31 @@ class ResourceController extends Controller
 
   protected $category;
 
+  protected $request;
+
   public function __construct() {
 
     $this -> resource = new Resource();
 
     $this -> category = new Category();
 
+    $this -> request = new Request();
+
   }
 
   public function reList() {
 
-    $resource = $this -> resource -> orderBy('re_cateid', 'asc') -> get();
+    $input = Input::except('_token');
+
+    if($input) {
+
+      $resource = $this -> resource -> where('re_name', 'like', '%'.$input['re_name']."%") -> get();
+
+    } else {
+
+      $resource = $this -> resource -> orderBy('re_cateid', 'asc') -> get();
+
+    }
 
     return view('admin.relist') -> with('resource', $resource);
 
@@ -39,11 +54,20 @@ class ResourceController extends Controller
 
     if($input) {
 
-      // dd($input);
+      $capture = Input::file('re_capture');
+      $qcode = Input::file('re_qcode');
+
+      if($capture) {
+        $re_capture = AdminTools::uploads($capture);
+        $input['re_capture'] = $re_capture;
+      }
+
+      if($qcode) {
+        $re_qcode = AdminTools::uploads($qcode);
+        $input['re_qcode'] = $re_qcode;
+      }
 
       $cate_id = $this -> category -> where('cate_name', $input['re_cate']) -> first();
-
-      // dd($cate_id -> cate_id);
 
       $input['re_cateid'] = $cate_id -> cate_id;
 
