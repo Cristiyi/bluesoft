@@ -1,50 +1,63 @@
 <app-head></app-head>
 
-<div class="input-group search">
-    <div class="input-icon-group">
-        <div class="input-group" style="width:100%">
-                <input type="text" class="form-control" placeholder="" value="${batchid}" data-clearbtn="true"/>
-               <span class="input-group-addon"><i class="glyphicon glyphicon-search"> </i></span>
-        </div>
-    </div>
-    <span class="input-group-btn">
-         <button class="btn btn-primary" type="button">搜索</button>
-    </span>
-</div>
+<article id="span-class" ng-init="getPlist()">
 
-<div class="row">
-        <div class="panel">
-            <div class="panel-heading">资源列表</div>
-            <div class="panel-body">
-                <ul class="autumn-grids">
-                    <li class="autumn-grid"><a href="#"> <img src="http://files.jb51.net/file_images/article/201601/201601041032365.png" class="img-rounded img-responsive"/></a>
-                    <p class="clearfix"><a class="pull-left" href="#">王菲</a></p>
-                    </li>
-                    <li class="autumn-grid"><a href="#"> <img src="http://files.jb51.net/file_images/article/201601/201601041032365.png"  class="img-rounded img-responsive"/></a><p><a href="#">王菲</a></p></li>
-                    <li class="autumn-grid"><a href="#"> <img src="http://files.jb51.net/file_images/article/201601/201601041032365.png"  class="img-rounded img-responsive"/></a><p><a href="#">王菲</a></p></li>
-                    <li class="autumn-grid"><a href="#"> <img src="http://files.jb51.net/file_images/article/201601/201601041032365.png" class="img-rounded img-responsive"/></a><p><a href="#">王菲</a></p></li>
-                    <li class="autumn-grid"><a href="#"> <img src="http://files.jb51.net/file_images/article/201601/201601041032365.png" class="img-rounded img-responsive"/></a><p><a href="#">王菲</a></p></li>
-                    <li class="autumn-grid"><a href="#"> <img src="http://files.jb51.net/file_images/article/201601/201601041032365.png" class="img-rounded img-responsive"/></a><p><a href="#">王菲</a></p></li>
-                    <li class="autumn-grid"><a href="#"> <img src="http://files.jb51.net/file_images/article/201601/201601041032365.png" class="img-rounded img-responsive"/></a><p><a href="#">王菲</a></p></li>
+  <ul id="class-ul" class="list-group row">
+    <li ng-repeat="ch in allch" class="span-class list-group-item col-xs-5 col-sm-5 col-md-3">
+      <span class="badge">{{ch.count}}</span>
+      <a href="">{{ch.cate_name}}</a>
+    </li>
+    <!-- <li class="span-class list-group-item col-xs-5 col-sm-5 col-md-3">
+      <span class="badge">14</span>
+      <a href="">Cras justo odio</a>
+    </li>
+    <li class="span-class list-group-item col-xs-5 col-sm-5 col-md-3">
+      <span class="badge">14</span>
+      <a href="">Cras justo odio</a>
+    </li>
+    <li class="span-class list-group-item col-xs-5 col-sm-5 col-md-3">
+      <span class="badge">14</span>
+      <a href="">Cras justo odio</a>
+    </li> -->
+  </ul>
 
-                </ul>
-            </div>
-            <ul class="pagination page">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+  <ul id="resource-ul" class="list-group row">
 
+    <li ng-repeat="re in index_resource" class="list-group-item col-xs-8 col-sm-10 col-md-5">
+      <img class="img-responsive" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517035743561&di=6d76408b3c42323493d2d4ff155d1b9a&imgtype=0&src=http%3A%2F%2Fimg1.dongqiudi.com%2Ffastdfs1%2FM00%2F74%2F59%2FpIYBAFkZRZeAF2-5AADjeHAQtmM37.jpeg" alt="">
+      <span class="resource-title"><a href="">{{re.re_name}}</a></span>
+    </li>
+    <!-- <li class="list-group-item col-xs-8 col-sm-10 col-md-5">
+      <img class="img-responsive" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517035743561&di=6d76408b3c42323493d2d4ff155d1b9a&imgtype=0&src=http%3A%2F%2Fimg1.dongqiudi.com%2Ffastdfs1%2FM00%2F74%2F59%2FpIYBAFkZRZeAF2-5AADjeHAQtmM37.jpeg" alt="">
+      <span class="resource-title"><a href="">Cras justo odio</a></span>
+    </li>
+    <li class="list-group-item col-xs-8 col-sm-10 col-md-5">
+      <img class="img-responsive" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517035743561&di=6d76408b3c42323493d2d4ff155d1b9a&imgtype=0&src=http%3A%2F%2Fimg1.dongqiudi.com%2Ffastdfs1%2FM00%2F74%2F59%2FpIYBAFkZRZeAF2-5AADjeHAQtmM37.jpeg" alt="">
+      <span class="resource-title"><a href="">Cras justo odio</a></span>
+    </li>
+    <li class="list-group-item col-xs-8 col-sm-10 col-md-5">
+      <img class="img-responsive" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517035743561&di=6d76408b3c42323493d2d4ff155d1b9a&imgtype=0&src=http%3A%2F%2Fimg1.dongqiudi.com%2Ffastdfs1%2FM00%2F74%2F59%2FpIYBAFkZRZeAF2-5AADjeHAQtmM37.jpeg" alt="">
+      <span class="resource-title"><a href="">Cras justo odio</a></span>
+    </li> -->
+  </ul>
+  <ul id="page" class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
 
+</article>
 
-
-
-<app-footer>
-</app-footer>
+<app-footer></app-footer>

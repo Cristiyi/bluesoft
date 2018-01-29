@@ -7,124 +7,63 @@ li {list-style:none}
 table {border-collapse:collapse;border-spacing:0}
 p {word-wrap:break-word}
 
-
-
-.header {
-  padding-bottom: 30px;
-  border-bottom: 2px solid blue;
+/* header */
+#nav-head {
+  width: 100%;
+}
+/*article-span */
+#span-class {
+  width: 100%;
+  margin: 0 auto;
+}
+#span-class #class-ul li:nth-of-type(odd){
+  margin: 1% 2.6% 1% 5% !important;
 }
 
-.nav-logo {
-    float: left;
-    height: 40px;
-    margin-top: 5px;
-    overflow: hidden;
+#span-class #class-ul li:nth-of-type(even){
+  margin: 1% 5% 1% 2.6% !important;
 }
 
-.nav-logo a {
-    margin: 0;
-    padding: 0;
+#class-ul {
+  background-color: #F5F5F5;
 }
 
-.navbar {
-  margin-bottom: 20px;
+#resource-ul {
+  width: 80%;
 }
 
-.search {
-  margin-bottom: 20px;
+#resource-ul li {
+  width: 80%;
+  margin: 5% 25%;
+}
+#resource-ul img {
+  margin: 2% 0;
 }
 
-.footer {
-  margin-bottom: 20px;
+#resource-ul .resource-title {
+  display: block;
+  text-align: center;
+  line-height: 2;
+  margin: 0 auto;
+}
+
+#page {
+  width: 80%;
+  margin:-5% 20% 10% 20%;
 }
 
 
-
-.autumn-grids {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-right: -25px;
-    letter-spacing: -4px;
-    zoom: 1;
+/* resource */
+#reimg {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.autumn-grid {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    vertical-align: top;
-    letter-spacing: 0;
-    width: 130px;
-    margin: 0px 10px 17px 0;
-    background: #fff;
-    padding: 0px;
-}
-.autumn-grid p {
-    text-align:center;
-    margin:0;
-    padding:10px 0 5px 2px;
-    }
-    .autumn-grid:hover {
-        border-top-color: #f78a4b;
-    }
-
-@media (min-width: 1200px) {
-  .page {
-    margin-left: 70px !important;
-   }
-  .autumn-grids {
-      margin-left: 70px;
-  }
-    .autumn-grid {
-        width: 130px;
-        margin: 0px 26px 17px 0;
-    }
+#redes {
+  width: 80%;
+  margin: 8% auto;
 }
 
-@media (min-width: 980px ) and ( max-width: 1199px ) {
-  .page {
-    margin-left: 70px !important;
-   }
-  .autumn-grids {
-      margin-left: 70px;
-  }
-    .autumn-grid {
-        width: 120px;
-        margin: 0px 20px 20px 0;
-    }
-}
-
-@media (min-width: 768px ) and ( max-width: 979px ) {
-  .page {
-    margin-left: 40px !important;
-   }
-  .autumn-grids {
-      margin-left: 40px;
-  }
-    .autumn-grid {
-        width: 120px;
-        margin: 0px 20px 20px 0;
-    }
-}
-
-@media ( max-width: 767px ) {
-
-    .page {
-      margin-left: 30px !important;
-     }
-    .autumn-grids {
-        margin-right: 0;
-        margin-left: 30px;
-    }
-
-    .autumn-grid {
-        width: 100px;
-        margin: 0px 20px 20px 0;
-    }
-}
-
-.page {
-  margin-right: 0;
-  margin-left: 30px;
+#redes .reurl {
+  display: block;
 }

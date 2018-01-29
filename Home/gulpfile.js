@@ -56,6 +56,7 @@ gulp.task('image', function() {
         .pipe(gulp.dest(app.devPath + 'image'))
         .pipe($.uglify())
         .pipe(gulp.dest(app.prdPath + 'image'))
+        .pipe($.uglify())
         .pipe($.connect.reload());
 });
 
@@ -68,13 +69,13 @@ gulp.task('clean', function() {
 });
 
 gulp.task('serve', ['build'], function() {
-    $.connect.server({
-        root: [app.devPath],
-        livereload: true,
-        port: 3000
-    });
-
-    open('http://localhost:3000');
+    // $.connect.server({
+    //     root: [app.devPath],
+    //     livereload: true,
+    //     port: 3000
+    // });
+    //
+    // open('http://localhost:3000');
 
     gulp.watch('bower_components/**/*', ['lib']);
     gulp.watch(app.srcPath + '**/*.html', ['html']);

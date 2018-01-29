@@ -48,3 +48,9 @@ Route::group(['middleware'=>['admin.login'],'prefix'=>'admin','namespace'=>'Admi
   Route::get('comlist', 'CommentController@comList');
 
 });
+
+Route::get('api/cate/plist', 'Api\CategoryController@plist');
+Route::get('api/cate/chlist/{pid}', 'Api\CategoryController@chlist');
+Route::get('api/cate/allch', 'Api\CategoryController@allChlist');
+Route::get('api/resource/all/{limit?}/{page?}', 'Api\ResourceController@allResource');
+Route::get('api/resource/cate/{cateid}/{limit?}/{page?}', 'Api\ResourceController@cateResource');

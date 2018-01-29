@@ -6,6 +6,13 @@ angular.module('blue').config(['$stateProvider', '$urlRouterProvider', function(
     url: '/index',
     templateUrl: 'view/index.html',
     controller: 'indexCtrl'
-  });
+  })
+
+  .state('resource', {
+    url: '/resource',
+    templateUrl: 'view/resource.html',
+    controller: 'resourceCtrl'
+  })
+
   $urlRouterProvider.otherwise('index');
 }])
