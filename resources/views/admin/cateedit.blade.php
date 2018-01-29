@@ -92,7 +92,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="./category.html">
+                            <a href="{{url('admin/catelist')}}">
                                 <i class="iconfont">&#xe6a7;</i>
                                 分类列表
                             </a>

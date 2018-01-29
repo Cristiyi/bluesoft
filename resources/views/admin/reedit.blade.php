@@ -92,7 +92,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="./category.html">
+                            <a href="{{url('admin/catelist')}}">
                                 <i class="iconfont">&#xe6a7;</i>
                                 分类列表
                             </a>
@@ -231,6 +231,14 @@
                     <div class="layui-input-inline">
                         <input type="text" id="cate_link" name="re_password" required=""
                         autocomplete="off" class="layui-input" value="{{$data -> re_password}}">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label for="re_password" class="layui-form-label">
+                        <span class="x-red">*</span>资源描述
+                    </label>
+                    <div class="layui-input-block">
+                        <textarea name="re_description" placeholder="请输入内容" class="layui-textarea" value="{{$data -> re_description}}"></textarea>
                     </div>
                 </div>
                 <div class="layui-form-item">
